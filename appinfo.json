@@ -3,8 +3,8 @@
     "capabilities": [
         ""
     ],
-    "companyName": "dksweenie@gmail.com",
-    "longName": "WE CAN DO IT",
+    "companyName": "gilbertaragon7801@gmail.com",
+    "longName": "Habitica?",
     "projectType": "pebblejs",
     "resources": {
         "media": [
@@ -32,12 +32,12 @@
         ]
     },
     "sdkVersion": "3",
-    "shortName": "WE CAN DO IT",
+    "shortName": "Habitica?",
     "targetPlatforms": [
         "aplite",
         "basalt"
     ],
-    "uuid": "5d99f3ff-b7ec-4816-8ea3-dfbfe38f1304",
+    "uuid": "0f308872-26bd-4269-ad72-949108c5aa66",
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
