@@ -1,5 +1,5 @@
 /**
- * Welcome to Pebble.js!
+ * Welcome to Hackucsc2016!
  *
  * This is where you write your app.
  */
