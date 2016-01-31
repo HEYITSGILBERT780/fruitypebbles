@@ -7,6 +7,8 @@
 var UI = require('ui');
 var health = 100;
 var exp = 0;
+var level = 1;
+var nextLv = 100;
 
 // Make a list of menu items
 var habits = [
@@ -75,7 +77,7 @@ habitMenu.on('select', function(event) {
         // Show a card with clicked item details
         var studyCard = new UI.Card({
           title: study[event.itemIndex].title,
-          body: study[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp
+          body: study[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp
         });
 
         // Show the new Card
@@ -83,6 +85,10 @@ habitMenu.on('select', function(event) {
         
         studyCard.on('click', 'up', function(event){
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         studyCard.on('click', 'down', function(event){
@@ -98,7 +104,7 @@ habitMenu.on('select', function(event) {
         // Show a card with clicked item details
         var studyCard = new UI.Card({
           title: study[event.itemIndex].title,
-          body: study[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp
+          body: study[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp
         });
         
         //Show the new Card
@@ -106,6 +112,10 @@ habitMenu.on('select', function(event) {
         
         studyCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         studyCard.on('click', 'down', function(event) {
@@ -155,7 +165,7 @@ habitMenu.on('select', function(event) {
         // Show a card with clicked item details
         var fitCard = new UI.Card({
           title: fit[event.itemIndex].title,
-          body: fit[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp
+          body: fit[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp
         });
 
         // Show the new Card
@@ -163,9 +173,13 @@ habitMenu.on('select', function(event) {
         
         fitCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
-        fitCard.on('click', 'up', function(event) {
+        fitCard.on('click', 'down', function(event) {
           health -= 3;
         });
       });
@@ -176,16 +190,20 @@ habitMenu.on('select', function(event) {
         
         var fitCard = new UI.Card({
           title: fit[event.itemIndex].title,
-          subtitle: fit[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp
+          subtitle: fit[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp
         });
         
         fitCard.show();
         
         fitCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
-        fitCard.on('click', 'up', function(event) {
+        fitCard.on('click', 'down', function(event) {
           health -= 3;
         });
       });
@@ -196,16 +214,20 @@ habitMenu.on('select', function(event) {
         
         var fitCard = new UI.Card({
           title: fit[event.itemIndex].title,
-          body: fit[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp 
+          body: fit[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp 
         });
         
         fitCard.show();
         
         fitCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
-        fitCard.on('click', 'up', function(event) {
+        fitCard.on('click', 'down', function(event) {
           health -= 3;
         });
       });
@@ -216,13 +238,17 @@ habitMenu.on('select', function(event) {
          
         var fitCard = new UI.Card({
           title: fit[event.itemIndex].title,
-          body: fit[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\exp: " + exp
+          body: fit[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\exp: " + exp
         });
       
         fitCard.show();
         
         fitCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         fitCard.on('click', 'down', function(event) {
@@ -266,13 +292,17 @@ habitMenu.on('select', function(event) {
         
         var hygCard = new UI.Card ({
           title: hyg[event.itemIndex].title,
-          body: hyg[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp 
+          body: hyg[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp 
         });
         
         hygCard.show();
         
         hygCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         hygCard.on('click', 'down', function(event) {
@@ -286,13 +316,17 @@ habitMenu.on('select', function(event) {
         
         var hygCard = new UI.Card ({
           title: hyg[event.itemIndex].title,
-          body: hyg[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp
+          body: hyg[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp
         });
         
         hygCard.show();
         
         hygCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         hygCard.on('click', 'down', function(event) {
@@ -306,13 +340,17 @@ habitMenu.on('select', function(event) {
         
         var hygCard = new UI.Card({
           title: hyg[event.itemIndex].title,
-          body: hyg[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp
+          body: hyg[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp
         });
         
         hygCard.show();
         
         hygCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         hygCard.on('click', 'down', function(event) {
@@ -360,13 +398,17 @@ habitMenu.on('select', function(event) {
         
         var choreCard = new UI.Card ({
           title: chore[event.itemIndex].title,
-          body: chore[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp
+          body: chore[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp
         });
         
         choreCard.show();
         
         choreCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         choreCard.on('click', 'down', function(event) {
@@ -380,13 +422,17 @@ habitMenu.on('select', function(event) {
         
         var choreCard = new UI.Card ({
           title: chore[event.itemIndex].title,
-          body: chore[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\exp: " + exp
+          body: chore[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\exp: " + exp
         });
         
         choreCard.show();
         
         choreCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         choreCard.on('click', 'down', function(event) {
@@ -400,13 +446,17 @@ habitMenu.on('select', function(event) {
         
         var choreCard = new UI.Card ({
           title: chore[event.itemIndex].title,
-          body: chore[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\exp: " + exp
+          body: chore[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\exp: " + exp
         });
         
         choreCard.show();
         
         choreCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         choreCard.on('click', 'down', function(event) {
@@ -420,13 +470,17 @@ habitMenu.on('select', function(event) {
         
         var choreCard = new UI.Card({
           title: chore[event.itemIndex].title,
-          body: chore[event.itemIndex].subtitle + "\n" + "\nhealth: " + health + "\nexp: " + exp
+          body: chore[event.itemIndex].subtitle + "\n" + "\nlv: " + level + "\nhealth: " + health + "\nexp: " + exp
         });
         
         choreCard.show();
         
         choreCard.on('click', 'up', function(event) {
           exp += 5;
+          if (exp == nextLv || exp > nextLv) {
+            level++;
+            nextLv+=(level*100);
+          }
         });
         
         choreCard.on('click', 'down', function(event) {
