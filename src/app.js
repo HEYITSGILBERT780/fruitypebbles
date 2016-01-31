@@ -65,36 +65,6 @@ habitMenu.on('select', function(event) {
     
     // Show the new Menu
     studyMenu.show();
-    
-    if (study[event.itemIndex].title == "Read") {
-      // Add a click listener for select button click
-      studyMenu.on('select', function(event) {
-
-      // Show a card with clicked item details
-      var studyCard = new UI.Card({
-        title: study[event.itemIndex].title,
-        body: study[event.itemIndex].subtitle
-      });
-
-      // Show the new Card
-      studyCard.show();
-      });
-    }
-    
-    if (study[event.itemIndex].title == "Homework") {
-      // Add a click listener for select button click
-      studyMenu.on('select', function(event) {
-        
-        // Show a card with clicked item details
-        var studyCard = new UI.Card({
-          title: study[event.itemIndex].title,
-          body: study[event.itemIndex].subtitle
-        });
-        
-        //Show the new Card
-        studyCard.show();
-      });
-    }
   }
   
   if (habits[event.itemIndex].title == "Fitness") {
@@ -115,7 +85,7 @@ habitMenu.on('select', function(event) {
       },
       {
         title: "Sports",
-        subtitle: "Play any sports?"
+        subtitle: "Play any sports"
       }
     ];
     
@@ -129,57 +99,6 @@ habitMenu.on('select', function(event) {
     
     // Show the new Menu
     fitMenu.show();
-    
-    if (fit[event.itemIndex].title == "Workout") {
-      // Add a click listener for select button click
-      fitMenu.on('select', function(event) {
-
-        // Show a card with clicked item details
-        var fitCard = new UI.Card({
-          title: fit[event.itemIndex].title,
-          body: fit[event.itemIndex].subtitle
-        });
-
-        // Show the new Card
-        fitCard.show();
-      });
-    }
-    
-    if (fit[event.itemIndex].title == "Run") {
-      fitMenu.on('select', function(event) {
-        
-        var fitCard = new UI.Card({
-          title: fit[event.itemIndex].title,
-          subtitle: fit[event.itemIndex].subtitle
-        });
-        
-        fitCard.show();
-      });
-    }
-    
-    if (fit[event.itemIndex].title == "Walk") {
-      fitMenu.on('select', function(event) {
-        
-        var fitCard = new UI.Card({
-          title: fit[event.itemIndex].title,
-          body: fit[event.itemIndex].subtitle
-        });
-        
-        fitCard.show();
-      });
-    }
-    
-    if (fit[event.itemIndex].title == "Sports") {
-      fitMenu.on('select', function(event) {
-         
-        var fitCard = new UI.Card({
-          title: fit[event.itemIndex].title,
-          body: fit[event.itemIndex].subtitle
-        });
-      
-        fitCard.show();
-      });
-    }
   }
   
   if (habits[event.itemIndex].title == "Hygiene") {
@@ -210,42 +129,6 @@ habitMenu.on('select', function(event) {
     
     // Show the new Menu
     hygMenu.show();
-    
-    if (hyg[event.itemIndex].title == "Shower") {
-      hygMenu.on('select', function(event) {
-        
-        var hygCard = new UI.Card ({
-          title: hyg[event.itemIndex].title,
-          body: hyg[event.itemIndex].subtitle
-        });
-        
-        hygCard.show();
-      });
-    }
-    
-    if (hyg[event.itemIndex].title == "Brush") {
-      hygMenu.on('select', function(event) {
-        
-        var hygCard = new UI.Card ({
-          title: hyg[event.itemIndex].title,
-          body: hyg[event.itemIndex].subtitle
-        });
-        
-        hygCard.show();
-      });
-    }
-    
-    if (hyg[event.itemIndex].title == "Floss") {
-      hygMenu.on('select', function(event) {
-        
-        var hygCard = new UI.Card({
-          title: hyg[event.itemIndex].title,
-          body: hyg[event.itemIndex].subtitle
-        });
-        
-        hygCard.show();
-      });
-    }
   }
   
   if (habits[event.itemIndex].title == "Chores") {
@@ -280,53 +163,5 @@ habitMenu.on('select', function(event) {
     
     // Show the new Menu
     choreMenu.show();
-    
-    if (chore[event.itemIndex].title == "Make bed") {
-      choreMenu.on('select', function(event) {
-        
-        var choreCard = new UI.Card ({
-          title: chore[event.itemIndex].title,
-          body: chore[event.itemIndex].subtitle
-        });
-        
-        choreCard.show();
-      });
-    }
-    
-    if (chore[event.itemIndex].title == "Dishes") {
-      choreMenu.on('select', function(event) {
-        
-        var choreCard = new UI.Card ({
-          title: chore[event.itemIndex].title,
-          body: chore[event.itemIndex].subtitle
-        });
-        
-        choreCard.show();
-      });
-    }
-    
-    if (chore[event.itemIndex].title == "Clean room") {
-      choreMenu.on('select', function(event) {
-        
-        var choreCard = new UI.Card ({
-          title: chore[event.itemIndex].title,
-          body: chore[event.itemIndex].subtitle
-        });
-        
-        choreCard.show();
-      });
-    }
-    
-    if (chore[event.itemIndex].title == "Laundry") {
-      choreMenu.on('select', function(event) {
-        
-        var choreCard = new UI.Card({
-          title: chore[event.itemIndex].title,
-          body: chore[event.itemIndex].subtitle
-        });
-        
-        choreCard.show();
-      });
-    }
   }
 });
