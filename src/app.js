@@ -1,13 +1,32 @@
 /**
- * Welcome to Hackucsc2016!
+ * Welcome to Pebble.js!
  *
  * This is where you write your app.
  */
 
 var UI = require('ui');
+var Vector2 = require('vector2');
 var health = 100;
 var exp = 0;
 
+//Create window
+var window = new UI.Window();
+
+//Load page statistics
+var stats = new UI.Text({
+  position: new Vector2(10,10),
+  size: new Vector2(124,30),
+  text: "Exp: "+exp,
+  color: 'black',
+  backgroundColor: 'white',
+  textAlign: 'center'
+});
+
+window.add(stats);
+window.show();
+
+
+window.on('click','select',function(e) {// Make a list of menu items
 // Make a list of menu items
 var habits = [
   {
@@ -83,6 +102,7 @@ habitMenu.on('select', function(event) {
         
         studyCard.on('click', 'up', function(event){
           exp += 5;
+          window.add(stats);
         });
         
         studyCard.on('click', 'down', function(event){
@@ -435,4 +455,5 @@ habitMenu.on('select', function(event) {
       });
     }
   }
+});
 });
